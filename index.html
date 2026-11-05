@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MO STORE | المتجر الرسمي</title>
+
+<meta name="description" content="مرحباً بكم في MO STORE">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #090909;
+    color: white;
+}
+
+header {
+    background: #111;
+    padding: 22px;
+    text-align: center;
+    border-bottom: 1px solid #c9a227;
+}
+
+.logo {
+    color: #d4af37;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+header p {
+    color: #ccc;
+    margin-bottom: 0;
+}
+
+.hero {
+    text-align: center;
+    padding: 65px 20px;
+    background: linear-gradient(135deg,#171717,#000);
+}
+
+.hero h1 {
+    color: #d4af37;
+    font-size: 32px;
+}
+
+.hero p {
+    color: #ddd;
+    font-size: 17px;
+}
+
+.hero button {
+    background: #d4af37;
+    color: black;
+    border: none;
+    padding: 14px 35px;
+    font-size: 17px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.section-title {
+    text-align: center;
+    color: #d4af37;
+    font-size: 26px;
+    margin: 35px 0 20px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+    padding: 15px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.product {
+    background: #171717;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 12px;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 9px;
+}
+
+.product h3 {
+    color: #d4af37;
+}
+
+.price {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.product button {
+    background: #d4af37;
+    color: black;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact {
+    text-align: center;
+    padding: 40px 15px;
+    background: #151515;
+    margin-top: 35px;
+}
+
+.contact h2 {
+    color: #d4af37;
+}
+
+.whatsapp {
+    display: inline-block;
+    background: #25d366;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 22px;
+    color: #aaa;
+    background: #050505;
+    border-top: 1px solid #333;
+}
+
+/* Cookie consent */
+.cookie-box {
+    position: fixed;
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+    background: #202020;
+    border: 1px solid #d4af37;
+    padding: 17px;
+    border-radius: 12px;
+    z-index: 9999;
+    text-align: center;
+    display: none;
+}
+
+.cookie-box button {
+    padding: 10px 17px;
+    margin: 7px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.accept {
+    background: #d4af37;
+}
+
+.reject {
+    background: #444;
+    color: white;
+}
+
+@media(max-width:450px) {
+    .product img {
+        height: 135px;
+    }
+
+    .logo {
+        font-size: 27px;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <div class="logo">MO STORE</div>
+    <p>مرحباً بكم في متجرنا الرسمي</p>
+</header>
+
+<section class="hero">
+    <h1>اكتشف عالم MO STORE</h1>
+    <p>منتجات مميزة وتجربة تسوق رائعة</p>
+    <button onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+        تسوق الآن
+    </button>
+</section>
+
+<h2 class="section-title" id="products">منتجاتنا</h2>
+
+<section class="products">
+
+    <div class="product">
+        <img src="https://placehold.co/400x400/222222/D4AF37?text=MO+STORE+1" alt="المنتج الأول">
+        <h3>المنتج الأول</h3>
+        <p class="price">50 ₪</p>
+        <button onclick="order('المنتج الأول')">اطلب الآن</button>
+    </div>
+
+    <div class="product">
+        <img src="https://placehold.co/400x400/222222/D4AF37?text=MO+STORE+2" alt="المنتج الثاني">
+        <h3>المنتج الثاني</h3>
+        <p class="price">70 ₪</p>
+        <button onclick="order('المنتج الثاني')">اطلب الآن</button>
+    </div>
+
+    <div class="product">
+        <img src="https://placehold.co/400x400/222222/D4AF37?text=MO+STORE+3" alt="المنتج الثالث">
+        <h3>المنتج الثالث</h3>
+        <p class="price">90 ₪</p>
+        <button onclick="order('المنتج الثالث')">اطلب الآن</button>
+    </div>
+
+    <div class="product">
+        <img src="https://placehold.co/400x400/222222/D4AF37?text=MO+STORE+4" alt="المنتج الرابع">
+        <h3>المنتج الرابع</h3>
+        <p class="price">120 ₪</p>
+        <button onclick="order('المنتج الرابع')">اطلب الآن</button>
+    </div>
+
+</section>
+
+<section class="contact">
+    <h2>تواصل معنا</h2>
+    <p>للطلب والاستفسار تواصل معنا عبر واتساب</p>
+    <a class="whatsapp" href="https://wa.me/972566569109"
+       onclick="trackContact()">
+       تواصل عبر واتساب
+    </a>
+</section>
+
+<footer>
+    <p>MO STORE © 2026</p>
+    <p>جميع الحقوق محفوظة</p>
+</footer>
+
+<div class="cookie-box" id="cookieBox">
+    <p>نستخدم ملفات التتبع لتحليل الزيارات وتحسين الإعلانات. هل توافق على ذلك؟</p>
+    <button class="accept" onclick="acceptCookies()">موافقة</button>
+    <button class="reject" onclick="rejectCookies()">رفض</button>
+</div>
+
+<script>
+const WHATSAPP = "972566569109";
+
+function order(product) {
+    trackContact();
+
+    const message = "مرحباً MO STORE، أريد طلب: " + product;
+
+    window.open(
+        "https://wa.me/" + WHATSAPP + "?text=" +
+        encodeURIComponent(message),
+        "_blank"
+    );
+}
+
+// TikTok Pixel - تحميل بعد موافقة المستخدم
+function loadTikTokPixel() {
+
+    if (window.pixelLoaded) return;
+
+    window.pixelLoaded = true;
+
+    !function (w, d, t) {
+        w.TiktokAnalyticsObject=t;
+        var ttq=w[t]=w[t]||[];
+
+        ttq.methods=[
+            "page","track","identify","instances","debug",
+            "on","off","once","ready","alias","group",
+            "enableCookie","disableCookie","holdConsent",
+            "revokeConsent","grantConsent"
+        ];
+
+        ttq.setAndDefer=function(t,e) {
+            t[e]=function() {
+                t.push([e].concat(
+                    Array.prototype.slice.call(arguments,0)
+                ));
+            };
+        };
+
+        for(var i=0;i<ttq.methods.length;i++) {
+            ttq.setAndDefer(ttq,ttq.methods[i]);
+        }
+
+        ttq.load=function(e,n) {
+            var r="https://analytics.tiktok.com/i18n/pixel/events.js";
+            var s=d.createElement("script");
+            s.type="text/javascript";
+            s.async=true;
+            s.src=r+"?sdkid="+e+"&lib="+t;
+            var a=d.getElementsByTagName("script")[0];
+            a.parentNode.insertBefore(s,a);
+        };
+
+        ttq.load('DBLREDJC77UFMFQA9FN0');
+        ttq.page();
+
+    }(window,document,'ttq');
+}
+
+function trackContact() {
+    if(window.ttq) {
+        ttq.track('Contact');
+    }
+}
+
+function acceptCookies() {
+    localStorage.setItem("mo_cookie_consent","accepted");
+    document.getElementById("cookieBox").style.display="none";
+    loadTikTokPixel();
+}
+
+function rejectCookies() {
+    localStorage.setItem("mo_cookie_consent","rejected");
+    document.getElementById("cookieBox").style.display="none";
+}
+
+window.addEventListener("load",function() {
+
+    const consent=localStorage.getItem("mo_cookie_consent");
+
+    if(consent==="accepted") {
+        loadTikTokPixel();
+    } else if(consent!=="rejected") {
+        document.getElementById("cookieBox").style.display="block";
+    }
+
+});
+</script>
+
+</body>
+</html>
